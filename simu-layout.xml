@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/xml/XSLT/panelfile-5-5-5.xsl" type="text/xsl"?>
+<layout-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://jmri.org/xml/schema/layout-5-5-5.xsd">
+  <jmriversion>
+    <major>5</major>
+    <minor>15</minor>
+    <test>7</test>
+    <modifier />
+  </jmriversion>
+  <sensors class="jmri.jmrix.internal.configurexml.InternalSensorManagerXml">
+    <defaultInitialState>unknown</defaultInitialState>
+    <sensor inverted="false">
+      <systemName>ISCLOCKRUNNING</systemName>
+    </sensor>
+  </sensors>
+  <sensors class="jmri.jmrix.mqtt.configurexml.MqttSensorManagerXml">
+    <sensor inverted="false">
+      <systemName>MSms100</systemName>
+      <userName>o-depart1</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MSms101</systemName>
+      <userName>o-depart2</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MSms102</systemName>
+      <userName>o-arrival1</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MSms103</systemName>
+      <userName>o-arrival2</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MSms104</systemName>
+      <userName>o-gville-ew</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MSms105</systemName>
+      <userName>o-gville-se</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MSms106</systemName>
+      <userName>o-gville-sw</userName>
+    </sensor>
+  </sensors>
+  <turnouts class="jmri.jmrix.mqtt.configurexml.MqttTurnoutManagerXml">
+    <operations automate="false">
+      <operation name="NoFeedback" class="jmri.configurexml.turnoutoperations.NoFeedbackTurnoutOperationXml" interval="300" maxtries="2" />
+      <operation name="Raw" class="jmri.configurexml.turnoutoperations.RawTurnoutOperationXml" interval="300" maxtries="1" />
+      <operation name="Sensor" class="jmri.configurexml.turnoutoperations.SensorTurnoutOperationXml" interval="300" maxtries="3" />
+    </operations>
+    <defaultclosedspeed>Normal</defaultclosedspeed>
+    <defaultthrownspeed>Restricted</defaultthrownspeed>
+    <turnout feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>MTm100</systemName>
+      <userName>gville-west</userName>
+    </turnout>
+    <turnout feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>MTm101</systemName>
+      <userName>gville-south</userName>
+    </turnout>
+    <turnout feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>MTm102</systemName>
+      <userName>gville-east</userName>
+    </turnout>
+    <turnout feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>MTm110</systemName>
+      <userName>y1</userName>
+    </turnout>
+    <turnout feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>MTm111</systemName>
+      <userName>y2</userName>
+    </turnout>
+    <turnout feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>MTm112</systemName>
+      <userName>y3</userName>
+    </turnout>
+    <turnout feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>MTm120</systemName>
+      <userName>pass1-e</userName>
+    </turnout>
+    <turnout feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>MTm121</systemName>
+      <userName>pass1-w</userName>
+    </turnout>
+    <turnout feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>MTm122</systemName>
+      <userName>pocket-t</userName>
+    </turnout>
+  </turnouts>
+  <memories class="jmri.managers.configurexml.DefaultMemoryManagerXml">
+    <memory value="9:17 PM">
+      <systemName>IMCURRENTTIME</systemName>
+    </memory>
+    <memory value="1.0">
+      <systemName>IMRATEFACTOR</systemName>
+    </memory>
+  </memories>
+  <blocks class="jmri.configurexml.BlockManagerXml">
+    <defaultspeed>Normal</defaultspeed>
+    <block systemName="IB:AUTO:0001">
+      <systemName>IB:AUTO:0001</systemName>
+      <userName>gville-ew</userName>
+    </block>
+    <block systemName="IB:AUTO:0002">
+      <systemName>IB:AUTO:0002</systemName>
+      <userName>gville-sw</userName>
+    </block>
+    <block systemName="IB:AUTO:0003">
+      <systemName>IB:AUTO:0003</systemName>
+      <userName>gville-se</userName>
+    </block>
+    <block systemName="IB:AUTO:0004">
+      <systemName>IB:AUTO:0004</systemName>
+      <userName>depart1</userName>
+    </block>
+    <block systemName="IB:AUTO:0005">
+      <systemName>IB:AUTO:0005</systemName>
+      <userName>depart2</userName>
+    </block>
+    <block systemName="IB:AUTO:0006">
+      <systemName>IB:AUTO:0006</systemName>
+      <userName>arrival1</userName>
+    </block>
+    <block systemName="IB:AUTO:0007">
+      <systemName>IB:AUTO:0007</systemName>
+      <userName>arrival2</userName>
+    </block>
+    <block systemName="IB:AUTO:0008">
+      <systemName>IB:AUTO:0008</systemName>
+      <userName>oval-main-1</userName>
+    </block>
+    <block systemName="IB:AUTO:0009">
+      <systemName>IB:AUTO:0009</systemName>
+      <userName>oval-main-2</userName>
+    </block>
+    <block systemName="IB:AUTO:0010">
+      <systemName>IB:AUTO:0010</systemName>
+      <userName>oval-main-3</userName>
+    </block>
+    <block systemName="IB:AUTO:0011">
+      <systemName>IB:AUTO:0011</systemName>
+      <userName>oval-main-4</userName>
+    </block>
+    <block systemName="IB:AUTO:0012">
+      <systemName>IB:AUTO:0012</systemName>
+      <userName>passing-1</userName>
+    </block>
+    <block systemName="IB:AUTO:0013">
+      <systemName>IB:AUTO:0013</systemName>
+      <userName>passing-2</userName>
+    </block>
+    <block systemName="IB:AUTO:0014">
+      <systemName>IB:AUTO:0014</systemName>
+      <userName>pocket</userName>
+    </block>
+    <block systemName="IB:AUTO:0001" length="0.0" curve="0">
+      <systemName>IB:AUTO:0001</systemName>
+      <userName>gville-ew</userName>
+      <permissive>no</permissive>
+      <path todir="128" fromdir="64" block="IB:AUTO:0002">
+        <beansetting setting="2">
+          <turnout systemName="gville-west" />
+        </beansetting>
+      </path>
+      <path todir="64" fromdir="128" block="IB:AUTO:0003">
+        <beansetting setting="2">
+          <turnout systemName="gville-east" />
+        </beansetting>
+      </path>
+    </block>
+    <block systemName="IB:AUTO:0002" length="0.0" curve="0">
+      <systemName>IB:AUTO:0002</systemName>
+      <userName>gville-sw</userName>
+      <permissive>no</permissive>
+      <path todir="64" fromdir="128" block="IB:AUTO:0001">
+        <beansetting setting="2">
+          <turnout systemName="gville-west" />
+        </beansetting>
+      </path>
+      <path todir="80" fromdir="160" block="IB:AUTO:0003">
+        <beansetting setting="2">
+          <turnout systemName="gville-south" />
+        </beansetting>
+      </path>
+      <path todir="128" fromdir="64" block="IB:AUTO:0008" />
+      <path todir="32" fromdir="16" block="IB:AUTO:0010" />
+    </block>
+    <block systemName="IB:AUTO:0003" length="0.0" curve="0">
+      <systemName>IB:AUTO:0003</systemName>
+      <userName>gville-se</userName>
+      <permissive>no</permissive>
+      <path todir="128" fromdir="64" block="IB:AUTO:0001">
+        <beansetting setting="2">
+          <turnout systemName="gville-east" />
+        </beansetting>
+      </path>
+      <path todir="160" fromdir="80" block="IB:AUTO:0002">
+        <beansetting setting="2">
+          <turnout systemName="gville-south" />
+        </beansetting>
+        <beansetting setting="4">
+          <turnout systemName="gville-east" />
+        </beansetting>
+      </path>
+      <path todir="64" fromdir="128" block="IB:AUTO:0004" />
+    </block>
+    <block systemName="IB:AUTO:0004" length="0.0" curve="0">
+      <systemName>IB:AUTO:0004</systemName>
+      <userName>depart1</userName>
+      <permissive>no</permissive>
+      <path todir="128" fromdir="64" block="IB:AUTO:0003" />
+      <path todir="64" fromdir="128" block="IB:AUTO:0005" />
+    </block>
+    <block systemName="IB:AUTO:0005" length="0.0" curve="0">
+      <systemName>IB:AUTO:0005</systemName>
+      <userName>depart2</userName>
+      <permissive>no</permissive>
+      <path todir="128" fromdir="64" block="IB:AUTO:0004" />
+      <path todir="64" fromdir="128" block="IB:AUTO:0006" />
+    </block>
+    <block systemName="IB:AUTO:0006" length="0.0" curve="0">
+      <systemName>IB:AUTO:0006</systemName>
+      <userName>arrival1</userName>
+      <permissive>no</permissive>
+      <path todir="128" fromdir="64" block="IB:AUTO:0005" />
+      <path todir="96" fromdir="144" block="IB:AUTO:0007" />
+    </block>
+    <block systemName="IB:AUTO:0007" length="0.0" curve="0">
+      <systemName>IB:AUTO:0007</systemName>
+      <userName>arrival2</userName>
+      <permissive>no</permissive>
+      <path todir="144" fromdir="96" block="IB:AUTO:0006" />
+    </block>
+    <block systemName="IB:AUTO:0008" length="0.0" curve="0">
+      <systemName>IB:AUTO:0008</systemName>
+      <userName>oval-main-1</userName>
+      <permissive>no</permissive>
+      <path todir="64" fromdir="128" block="IB:AUTO:0002" />
+      <path todir="32" fromdir="16" block="IB:AUTO:0009" />
+    </block>
+    <block systemName="IB:AUTO:0009" length="0.0" curve="0">
+      <systemName>IB:AUTO:0009</systemName>
+      <userName>oval-main-2</userName>
+      <permissive>no</permissive>
+      <path todir="16" fromdir="32" block="IB:AUTO:0008" />
+      <path todir="16" fromdir="32" block="IB:AUTO:0010" />
+      <path todir="32" fromdir="16" block="IB:AUTO:0012" />
+      <path todir="160" fromdir="80" block="IB:AUTO:0012" />
+    </block>
+    <block systemName="IB:AUTO:0010" length="0.0" curve="0">
+      <systemName>IB:AUTO:0010</systemName>
+      <userName>oval-main-3</userName>
+      <permissive>no</permissive>
+      <path todir="16" fromdir="32" block="IB:AUTO:0002" />
+      <path todir="32" fromdir="16" block="IB:AUTO:0009" />
+      <path todir="80" fromdir="160" block="IB:AUTO:0014" />
+    </block>
+    <block systemName="IB:AUTO:0011" length="0.0" curve="0">
+      <systemName>IB:AUTO:0011</systemName>
+      <userName>oval-main-4</userName>
+      <permissive>no</permissive>
+    </block>
+    <block systemName="IB:AUTO:0012" length="0.0" curve="0">
+      <systemName>IB:AUTO:0012</systemName>
+      <userName>passing-1</userName>
+      <permissive>no</permissive>
+      <path todir="16" fromdir="32" block="IB:AUTO:0009" />
+      <path todir="80" fromdir="160" block="IB:AUTO:0009" />
+    </block>
+    <block systemName="IB:AUTO:0013" length="0.0" curve="0">
+      <systemName>IB:AUTO:0013</systemName>
+      <userName>passing-2</userName>
+      <permissive>no</permissive>
+    </block>
+    <block systemName="IB:AUTO:0014" length="0.0" curve="0">
+      <systemName>IB:AUTO:0014</systemName>
+      <userName>pocket</userName>
+      <permissive>no</permissive>
+      <path todir="160" fromdir="80" block="IB:AUTO:0010" />
+    </block>
+  </blocks>
+  <layoutblocks class="jmri.jmrit.display.layoutEditor.configurexml.LayoutBlockManagerXml">
+    <layoutblock systemName="ILB1" occupiedsense="2" trackcolor="darkGray" occupiedcolor="red" extracolor="white">
+      <systemName>ILB1</systemName>
+      <userName>gville-ew</userName>
+    </layoutblock>
+    <layoutblock systemName="ILB2" occupiedsense="2" trackcolor="darkGray" occupiedcolor="red" extracolor="white">
+      <systemName>ILB2</systemName>
+      <userName>gville-se</userName>
+    </layoutblock>
+    <layoutblock systemName="ILB3" occupiedsense="2" trackcolor="darkGray" occupiedcolor="red" extracolor="white">
+      <systemName>ILB3</systemName>
+      <userName>gville-sw</userName>
+    </layoutblock>
+    <layoutblock systemName="ILB4" occupiedsense="2" trackcolor="darkGray" occupiedcolor="red" extracolor="white">
+      <systemName>ILB4</systemName>
+      <userName>depart1</userName>
+    </layoutblock>
+    <layoutblock systemName="ILB5" occupiedsense="2" trackcolor="darkGray" occupiedcolor="red" extracolor="white">
+      <systemName>ILB5</systemName>
+      <userName>depart2</userName>
+    </layoutblock>
+    <layoutblock systemName="ILB6" occupiedsense="2" trackcolor="darkGray" occupiedcolor="red" extracolor="white">
+      <systemName>ILB6</systemName>
+      <userName>arrival1</userName>
+    </layoutblock>
+    <layoutblock systemName="ILB7" occupiedsense="2" trackcolor="darkGray" occupiedcolor="red" extracolor="white">
+      <systemName>ILB7</systemName>
+      <userName>arrival2</userName>
+    </layoutblock>
+    <layoutblock systemName="ILB8" occupiedsense="2" trackcolor="darkGray" occupiedcolor="red" extracolor="white">
+      <systemName>ILB8</systemName>
+      <userName>pocket</userName>
+    </layoutblock>
+    <layoutblock systemName="ILB9" occupiedsense="2" trackcolor="darkGray" occupiedcolor="red" extracolor="white">
+      <systemName>ILB9</systemName>
+      <userName>oval-main-1</userName>
+    </layoutblock>
+    <layoutblock systemName="ILB10" occupiedsense="2" trackcolor="darkGray" occupiedcolor="red" extracolor="white">
+      <systemName>ILB10</systemName>
+      <userName>oval-main-2</userName>
+    </layoutblock>
+    <layoutblock systemName="ILB11" occupiedsense="2" trackcolor="darkGray" occupiedcolor="red" extracolor="white">
+      <systemName>ILB11</systemName>
+      <userName>passing-1</userName>
+    </layoutblock>
+    <layoutblock systemName="ILB12" occupiedsense="2" trackcolor="darkGray" occupiedcolor="red" extracolor="white">
+      <systemName>ILB12</systemName>
+      <userName>oval-main-3</userName>
+    </layoutblock>
+  </layoutblocks>
+  <signalmastlogics class="jmri.managers.configurexml.DefaultSignalMastLogicManagerXml">
+    <logicDelay>500</logicDelay>
+  </signalmastlogics>
+  <meters class="jmri.managers.configurexml.AbstractMeterManagerXml">
+    <meter>
+      <systemName>DV0</systemName>
+      <userName>Track A MAIN (D)</userName>
+    </meter>
+    <meter>
+      <systemName>DV1</systemName>
+      <userName>Track B PROG (D)</userName>
+    </meter>
+  </meters>
+  <timebase class="jmri.jmrit.simpleclock.configurexml.SimpleTimebaseXml" time="Thu May 28 18:54:31 EDT 2026" rate="1.0" startrate="1.0" run="yes" master="yes" sync="no" correct="no" display="no" startstopped="no" startrunning="yes" startsettime="no" startclockoption="0" showbutton="no" startsetrate="yes" />
+  <LayoutEditor class="jmri.jmrit.display.layoutEditor.configurexml.LayoutEditorXml" name="My Layout" x="537" y="301" windowheight="1176" windowwidth="1876" panelheight="654" panelwidth="1651" sliders="no" scrollable="none" editable="yes" positionable="yes" controlling="yes" animating="yes" showhelpbar="no" drawgrid="yes" snaponadd="no" snaponmove="no" antialiasing="no" turnoutcircles="no" tooltipsnotedit="no" tooltipsinedit="yes" mainlinetrackwidth="4" xscale="1.0" yscale="1.0" sidetrackwidth="2" defaulttrackcolor="darkGray" defaultoccupiedtrackcolor="red" defaultalternativetrackcolor="white" defaulttextcolor="black" turnoutcirclecolor="black" turnoutcirclesize="4" turnoutdrawunselectedleg="yes" turnoutbx="20.0" turnoutcx="20.0" turnoutwid="10.0" xoverlong="30.0" xoverhwid="10.0" xovershort="10.0" autoblkgenerate="no" redBackground="192" greenBackground="192" blueBackground="192" gridSize="10" gridSize2nd="10" openDispatcher="no" useDirectTurnoutControl="no">
+    <layoutTrackDrawingOptions name="My Layout" class="jmri.jmrit.display.layoutEditor.configurexml.LayoutTrackDrawingOptionsXml">
+      <mainBallastColor>#000000</mainBallastColor>
+      <mainBallastWidth>0</mainBallastWidth>
+      <mainBlockLineDashPercentageX10>0</mainBlockLineDashPercentageX10>
+      <mainBlockLineWidth>4</mainBlockLineWidth>
+      <mainRailColor>#404040</mainRailColor>
+      <mainRailCount>1</mainRailCount>
+      <mainRailGap>0</mainRailGap>
+      <mainRailWidth>2</mainRailWidth>
+      <mainTieColor>#000000</mainTieColor>
+      <mainTieGap>0</mainTieGap>
+      <mainTieLength>0</mainTieLength>
+      <mainTieWidth>0</mainTieWidth>
+      <sideBallastColor>#000000</sideBallastColor>
+      <sideBallastWidth>0</sideBallastWidth>
+      <sideBlockLineDashPercentageX10>0</sideBlockLineDashPercentageX10>
+      <sideBlockLineWidth>2</sideBlockLineWidth>
+      <sideRailColor>#404040</sideRailColor>
+      <sideRailCount>1</sideRailCount>
+      <sideRailGap>0</sideRailGap>
+      <sideRailWidth>1</sideRailWidth>
+      <sideTieColor>#000000</sideTieColor>
+      <sideTieGap>0</sideTieGap>
+      <sideTieLength>0</sideTieLength>
+      <sideTieWidth>0</sideTieWidth>
+    </layoutTrackDrawingOptions>
+    <layoutturnout ident="TO5" type="RH_TURNOUT" hidden="no" disabled="no" disableWhenOccupied="no" showtooltip="yes" continuing="2" xcen="1186.0" ycen="100.0" xa="1166.0" ya="100.0" xb="1206.0" yb="100.0" xc="1206.0" yc="110.0" xd="1166.0" yd="100.0" ver="1" class="jmri.jmrit.display.layoutEditor.configurexml.LayoutRHTurnoutXml" turnoutname="y1" blockname="depart1" connectaname="T7" connectbname="T1" connectcname="T9" />
+    <layoutturnout ident="TO7" type="RH_TURNOUT" hidden="no" disabled="no" disableWhenOccupied="no" showtooltip="yes" continuing="2" xcen="1325.0" ycen="140.0" xa="1305.0" ya="140.0" xb="1345.0" yb="140.0" xc="1345.0" yc="150.0" xd="1305.0" yd="140.0" ver="1" class="jmri.jmrit.display.layoutEditor.configurexml.LayoutRHTurnoutXml" turnoutname="y3" blockname="arrival1" connectaname="T11" connectbname="T5" connectcname="T14" />
+    <layoutturnout ident="TO9" type="LH_TURNOUT" hidden="no" disabled="no" disableWhenOccupied="no" showtooltip="yes" continuing="2" xcen="1123.0" ycen="99.0" xa="1143.0" ya="99.0" xb="1103.0" yb="99.0" xc="1103.0" yc="109.0" xd="1143.0" yd="99.0" ver="1" class="jmri.jmrit.display.layoutEditor.configurexml.LayoutLHTurnoutXml" turnoutname="gville-east" blockname="gville-se" connectaname="T7" connectbname="T8" connectcname="T13" />
+    <layoutturnout ident="TO11" type="RH_TURNOUT" hidden="no" disabled="no" disableWhenOccupied="no" showtooltip="yes" continuing="2" xcen="924.0" ycen="99.0" xa="904.0" ya="99.0" xb="944.0" yb="99.0" xc="944.0" yc="109.0" xd="904.0" yd="99.0" ver="1" class="jmri.jmrit.display.layoutEditor.configurexml.LayoutRHTurnoutXml" turnoutname="gville-west" blockname="gville-sw" connectaname="T16" connectbname="T8" connectcname="T12" />
+    <layoutturnout ident="TO12" type="RH_TURNOUT" hidden="no" disabled="no" disableWhenOccupied="no" showtooltip="yes" continuing="2" xcen="1256.0" ycen="120.0" xa="1236.0" ya="120.0" xb="1276.0" yb="120.0" xc="1276.0" yc="130.0" xd="1236.0" yd="120.0" ver="1" class="jmri.jmrit.display.layoutEditor.configurexml.LayoutRHTurnoutXml" turnoutname="y2" blockname="depart2" connectaname="T9" connectbname="T10" connectcname="T11" />
+    <layoutturnout ident="TO13" type="WYE_TURNOUT" hidden="no" disabled="no" disableWhenOccupied="no" showtooltip="yes" continuing="2" xcen="1012.0" ycen="228.0" xa="1012.0" ya="248.0" xb="1017.0" yb="208.0" xc="1007.0" yc="208.0" xd="1007.0" yd="248.0" ver="1" class="jmri.jmrit.display.layoutEditor.configurexml.LayoutWyeXml" turnoutname="gville-south" blockname="gville-sw" connectaname="T25" connectbname="T13" connectcname="T12" />
+    <layoutturnout ident="TO16" type="RH_TURNOUT" hidden="no" disabled="no" disableWhenOccupied="no" showtooltip="yes" continuing="2" xcen="1011.0" ycen="411.0" xa="1011.0" ya="391.0" xb="1011.0" yb="431.0" xc="1001.0" yc="431.0" xd="1011.0" yd="391.0" ver="1" class="jmri.jmrit.display.layoutEditor.configurexml.LayoutRHTurnoutXml" turnoutname="pass1-e" blockname="oval-main-2" connectaname="T27" connectbname="T30" connectcname="T33" />
+    <layoutturnout ident="TO17" type="RH_TURNOUT" hidden="no" disabled="no" disableWhenOccupied="no" showtooltip="yes" continuing="2" xcen="1011.0" ycen="325.0" xa="1011.0" ya="345.0" xb="1011.0" yb="305.0" xc="1021.0" yc="305.0" xd="1011.0" yd="345.0" ver="1" class="jmri.jmrit.display.layoutEditor.configurexml.LayoutRHTurnoutXml" turnoutname="pocket-t" blockname="oval-main-3" connectaname="T27" connectbname="T25" connectcname="T26" />
+    <layoutturnout ident="TO18" type="LH_TURNOUT" hidden="no" disabled="no" disableWhenOccupied="no" showtooltip="yes" continuing="2" xcen="640.0" ycen="385.0" xa="640.0" ya="365.0" xb="640.0" yb="405.0" xc="650.0" yc="405.0" xd="640.0" yd="365.0" ver="1" class="jmri.jmrit.display.layoutEditor.configurexml.LayoutLHTurnoutXml" turnoutname="pass1-w" blockname="oval-main-2" connectaname="T24" connectbname="T28" connectcname="T37" />
+    <tracksegment ident="T1" blockname="depart1" connect1name="TO5" type1="TURNOUT_B" connect2name="EB3" type2="POS_POINT" dashed="no" mainline="no" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T5" blockname="arrival1" connect1name="TO7" type1="TURNOUT_B" connect2name="EB5" type2="POS_POINT" dashed="no" mainline="no" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T7" blockname="depart1" connect1name="TO9" type1="TURNOUT_A" connect2name="TO5" type2="TURNOUT_A" dashed="no" mainline="no" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T8" blockname="gville-ew" connect1name="TO11" type1="TURNOUT_B" connect2name="TO9" type2="TURNOUT_B" dashed="no" mainline="no" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T9" blockname="depart2" connect1name="TO5" type1="TURNOUT_C" connect2name="TO12" type2="TURNOUT_A" dashed="no" mainline="no" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T10" blockname="depart2" connect1name="TO12" type1="TURNOUT_B" connect2name="EB4" type2="POS_POINT" dashed="no" mainline="no" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T11" blockname="arrival1" connect1name="TO12" type1="TURNOUT_C" connect2name="TO7" type2="TURNOUT_A" dashed="no" mainline="no" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T12" blockname="gville-sw" connect1name="TO11" type1="TURNOUT_C" connect2name="TO13" type2="TURNOUT_C" dashed="no" mainline="yes" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T13" blockname="gville-se" connect1name="TO9" type1="TURNOUT_C" connect2name="TO13" type2="TURNOUT_B" dashed="no" mainline="no" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T14" blockname="arrival2" connect1name="TO7" type1="TURNOUT_C" connect2name="A4" type2="POS_POINT" dashed="no" mainline="no" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T15" blockname="arrival2" connect1name="A4" type1="POS_POINT" connect2name="EB6" type2="POS_POINT" dashed="no" mainline="no" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T16" blockname="oval-main-1" connect1name="TO11" type1="TURNOUT_A" connect2name="A6" type2="POS_POINT" dashed="no" mainline="yes" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T17" blockname="oval-main-1" connect1name="A6" type1="POS_POINT" connect2name="A7" type2="POS_POINT" dashed="no" mainline="yes" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T24" blockname="oval-main-1" connect1name="A7" type1="POS_POINT" connect2name="TO18" type2="TURNOUT_A" dashed="no" mainline="yes" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T25" blockname="oval-main-3" connect1name="TO13" type1="TURNOUT_A" connect2name="TO17" type2="TURNOUT_B" dashed="no" mainline="yes" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T26" blockname="pocket" connect1name="TO17" type1="TURNOUT_C" connect2name="EB7" type2="POS_POINT" dashed="no" mainline="no" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T27" blockname="oval-main-3" connect1name="TO17" type1="TURNOUT_A" connect2name="TO16" type2="TURNOUT_A" dashed="no" mainline="yes" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T28" blockname="oval-main-2" connect1name="TO18" type1="TURNOUT_B" connect2name="A12" type2="POS_POINT" dashed="no" mainline="yes" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T29" blockname="oval-main-2" connect1name="A12" type1="POS_POINT" connect2name="A9" type2="POS_POINT" dashed="no" mainline="yes" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T30" blockname="oval-main-2" connect1name="TO16" type1="TURNOUT_B" connect2name="A13" type2="POS_POINT" dashed="no" mainline="yes" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T31" blockname="oval-main-2" connect1name="A13" type1="POS_POINT" connect2name="A18" type2="POS_POINT" dashed="no" mainline="yes" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T32" blockname="oval-main-2" connect1name="A18" type1="POS_POINT" connect2name="A9" type2="POS_POINT" dashed="no" mainline="yes" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T33" blockname="passing-1" connect1name="TO16" type1="TURNOUT_C" connect2name="A14" type2="POS_POINT" dashed="no" mainline="no" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T34" blockname="passing-1" connect1name="A14" type1="POS_POINT" connect2name="A17" type2="POS_POINT" dashed="no" mainline="no" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T35" blockname="passing-1" connect1name="A17" type1="POS_POINT" connect2name="A16" type2="POS_POINT" dashed="no" mainline="no" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T36" blockname="passing-1" connect1name="A16" type1="POS_POINT" connect2name="A15" type2="POS_POINT" dashed="no" mainline="no" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <tracksegment ident="T37" blockname="passing-1" connect1name="TO18" type1="TURNOUT_C" connect2name="A15" type2="POS_POINT" dashed="no" mainline="no" hidden="no" class="jmri.jmrit.display.layoutEditor.configurexml.TrackSegmentXml" />
+    <positionablepoint ident="EB3" type="END_BUMPER" x="1601.0" y="100.0" connect1name="T1" class="jmri.jmrit.display.layoutEditor.configurexml.PositionablePointXml" />
+    <positionablepoint ident="EB4" type="END_BUMPER" x="1601.0" y="120.0" connect1name="T10" class="jmri.jmrit.display.layoutEditor.configurexml.PositionablePointXml" />
+    <positionablepoint ident="EB5" type="END_BUMPER" x="1601.0" y="141.0" connect1name="T5" class="jmri.jmrit.display.layoutEditor.configurexml.PositionablePointXml" />
+    <positionablepoint ident="EB6" type="END_BUMPER" x="1600.0" y="160.0" connect1name="T15" class="jmri.jmrit.display.layoutEditor.configurexml.PositionablePointXml" />
+    <positionablepoint ident="A4" type="ANCHOR" x="1361.0" y="161.0" connect1name="T14" connect2name="T15" class="jmri.jmrit.display.layoutEditor.configurexml.PositionablePointXml" />
+    <positionablepoint ident="A6" type="ANCHOR" x="698.0" y="102.0" connect1name="T16" connect2name="T17" class="jmri.jmrit.display.layoutEditor.configurexml.PositionablePointXml" />
+    <positionablepoint ident="A7" type="ANCHOR" x="638.0" y="223.0" connect1name="T17" connect2name="T24" class="jmri.jmrit.display.layoutEditor.configurexml.PositionablePointXml" />
+    <positionablepoint ident="A9" type="ANCHOR" x="714.0" y="600.0" connect1name="T29" connect2name="T32" class="jmri.jmrit.display.layoutEditor.configurexml.PositionablePointXml" />
+    <positionablepoint ident="EB7" type="END_BUMPER" x="1076.0" y="241.0" connect1name="T26" class="jmri.jmrit.display.layoutEditor.configurexml.PositionablePointXml" />
+    <positionablepoint ident="A12" type="ANCHOR" x="641.0" y="522.0" connect1name="T28" connect2name="T29" class="jmri.jmrit.display.layoutEditor.configurexml.PositionablePointXml" />
+    <positionablepoint ident="A13" type="ANCHOR" x="1010.0" y="512.0" connect1name="T30" connect2name="T31" class="jmri.jmrit.display.layoutEditor.configurexml.PositionablePointXml" />
+    <positionablepoint ident="A14" type="ANCHOR" x="966.0" y="500.0" connect1name="T33" connect2name="T34" class="jmri.jmrit.display.layoutEditor.configurexml.PositionablePointXml" />
+    <positionablepoint ident="A15" type="ANCHOR" x="676.0" y="493.0" connect1name="T36" connect2name="T37" class="jmri.jmrit.display.layoutEditor.configurexml.PositionablePointXml" />
+    <positionablepoint ident="A16" type="ANCHOR" x="717.0" y="544.0" connect1name="T35" connect2name="T36" class="jmri.jmrit.display.layoutEditor.configurexml.PositionablePointXml" />
+    <positionablepoint ident="A17" type="ANCHOR" x="900.0" y="547.0" connect1name="T34" connect2name="T35" class="jmri.jmrit.display.layoutEditor.configurexml.PositionablePointXml" />
+    <positionablepoint ident="A18" type="ANCHOR" x="902.0" y="604.0" connect1name="T31" connect2name="T32" class="jmri.jmrit.display.layoutEditor.configurexml.PositionablePointXml" />
+  </LayoutEditor>
+  <filehistory>
+    <operation>
+      <type>app</type>
+      <date>Thu May 28 18:54:30 EDT 2026</date>
+      <filename>PanelPro (v5.15.7)</filename>
+    </operation>
+    <operation>
+      <type>Store</type>
+      <date>Thu May 28 21:17:37 EDT 2026</date>
+      <filename>/Users/blw/Library/Preferences/JMRI/My_JMRI_Railroad.jmri/simu-layout.xml</filename>
+    </operation>
+  </filehistory>
+  <!--Written by JMRI version 5.15.7+R380e60fa42 on Thu May 28 21:17:37 EDT 2026-->
+</layout-config>

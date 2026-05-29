@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<auxiliary-configuration xmlns="http://www.netbeans.org/ns/auxiliary-configuration/1">
+    <connections xmlns="http://jmri.org/xml/schema/auxiliary-configuration/connections-2-9-6.xsd">
+        <connection xmlns="" class="jmri.jmrix.dccpp.serial.configurexml.ConnectionConfigXml" disabled="no" manufacturer="DCC++" port="cu.usbmodem83101" reconnectMaxAttempts="100" reconnectMaxInterval="120" speed="115200" systemPrefix="D" turnoutInterval="250" userName="DCC++">
+            <options>
+                <option>
+                    <name>StartUpDelay</name>
+                    <value>10 seconds</value>
+                </option>
+            </options>
+        </connection>
+        <connection xmlns="" address="192.168.68.250" class="jmri.jmrix.mqtt.configurexml.MqttConnectionConfigXml" disabled="no" manufacturer="MQTT" mdnsConfigure="false" port="1883" reconnectMaxAttempts="100" reconnectMaxInterval="120" systemPrefix="M" turnoutInterval="250" userName="MQTT">
+            <options>
+                <option>
+                    <name>0 MQTTchannel</name>
+                    <value/>
+                </option>
+                <option>
+                    <name>0.1</name>
+                    <value/>
+                </option>
+                <option>
+                    <name>0.2</name>
+                    <value/>
+                </option>
+                <option>
+                    <name>10.3</name>
+                    <value>track/turnout/{0}</value>
+                </option>
+                <option>
+                    <name>10.5</name>
+                    <value>track/turnout/{0}</value>
+                </option>
+                <option>
+                    <name>11.3</name>
+                    <value>track/sensor/{0}</value>
+                </option>
+                <option>
+                    <name>11.5</name>
+                    <value>track/sensor/{0}</value>
+                </option>
+                <option>
+                    <name>12.3</name>
+                    <value>track/light/{0}</value>
+                </option>
+                <option>
+                    <name>12.5</name>
+                    <value>track/light/{0}</value>
+                </option>
+                <option>
+                    <name>13</name>
+                    <value>track/reporter/{0}</value>
+                </option>
+                <option>
+                    <name>14</name>
+                    <value>track/signalhead/{0}</value>
+                </option>
+                <option>
+                    <name>15</name>
+                    <value>track/signalmast/{0}</value>
+                </option>
+                <option>
+                    <name>16.3</name>
+                    <value>cab/{0}/throttle</value>
+                </option>
+                <option>
+                    <name>16.5</name>
+                    <value>cab/{0}/throttle</value>
+                </option>
+                <option>
+                    <name>17.3</name>
+                    <value>cab/{0}/direction</value>
+                </option>
+                <option>
+                    <name>17.5</name>
+                    <value>cab/{0}/direction</value>
+                </option>
+                <option>
+                    <name>18.3</name>
+                    <value>cab/{0}/function/{1}</value>
+                </option>
+                <option>
+                    <name>18.5</name>
+                    <value>cab/{0}/function/{1}</value>
+                </option>
+                <option>
+                    <name>19.3</name>
+                    <value>cab/{0}/consist</value>
+                </option>
+                <option>
+                    <name>20.3</name>
+                    <value>track/power</value>
+                </option>
+                <option>
+                    <name>20.5</name>
+                    <value>track/power</value>
+                </option>
+                <option>
+                    <name>LastWillMessage</name>
+                    <value>OFFLINE</value>
+                </option>
+                <option>
+                    <name>LastWillTopic</name>
+                    <value>track/state</value>
+                </option>
+            </options>
+        </connection>
+    </connections>
+    <startup xmlns="http://jmri.org/xml/schema/auxiliary-configuration/startup-4-3-5.xsd">
+        <perform xmlns="" class="jmri.util.startup.configurexml.PerformActionModelXml" name="jmri.web.server.WebServerAction" type="Action">
+            <property name="systemPrefix" value=""/>
+        </perform>
+    </startup>
+</auxiliary-configuration>
