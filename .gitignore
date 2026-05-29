@@ -1,0 +1,11 @@
+# MQTT client-ID directories (runtime, change every session)
+MyJMRIRail*/
+
+# JMRI runtime state
+backupPanels/
+blockvalues.xml
+throttle/
+*.bak
+
+# Runtime profile subdirectory
+profile/d3b94361-3216-4c4d-be20-c3243ce6acbf/
